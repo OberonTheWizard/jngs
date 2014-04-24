@@ -27,5 +27,20 @@ public class FastQ {
     public String getQuality(){
         return this.qual;
     }
+    public String toString(){
+        StringBuilder b = new StringBuilder();
+        if(this.name.startsWith("@")){
+            b.append(this.name);
+        }else {
+            b.append("@");
+            b.append(this.name);
+        }
+        b.append("\n");
+        b.append(this.seq);
+        b.append("\n");
+        b.append(this.qual);
+        b.append("\n");
+        return b.toString();
+    }
 }
 

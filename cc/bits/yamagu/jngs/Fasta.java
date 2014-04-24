@@ -19,4 +19,7 @@ public class Fasta {
     public void setName(String n){
         this.name = n;
     }
+    public String toString(){
+        return ">" + this.name + "\n" + this.seq + "\n";
+    }
 }
